@@ -1,0 +1,14 @@
+bc99bb0be13f724ef378858c416b3b6e *DESCRIPTION
+14625b66e986e7e2f7e63e7db98cb130 *LICENSE
+af590856455d340f4f73ba8c46bfae4f *NAMESPACE
+625da4bd36e349b72de9d4062b31068b *NEWS.md
+d5da4a4f4106352848f40829dde6fbdd *R/close_rselenium.R
+5f443934580161308a03f1e016aa0cb8 *R/parscrape.R
+341b1b65d12c425bba0ce1083797bf9d *R/parsel-package.R
+71392ac9e61e5fee19a21092f6148c0b *README.md
+fa4db459959bb41b26b9bda60c8a0385 *man/close_rselenium.Rd
+12a93310b0a2feb69c176354a44e34a1 *man/parscrape.Rd
+1267e96e5c576aead410a1ed8749fa5a *man/parsel-package.Rd
+8c8ddab6b3d2a66d9e736c5673a7dd1f *tests/testthat.R
+b016be40e7905ac34ca45fef6ffec2c1 *tests/testthat/test_input_handling.R
+0f962d8563bd107b1bf9dfe1cd2d2ab0 *tests/testthat/test_output.R
