@@ -22,12 +22,12 @@ go <- function(url, prev = NULL){
 
   not_loaded <- "not_loaded <- TRUE"
 
-  navigate <- paste("remDr$navigate('",url,"')", sep = "")
+  navigate <- paste("remDr$navigate(",url,")", sep = "")
 
   while_loop <- paste("while(not_loaded){",
                       "Sys.sleep(0.25)",
-                      "current <- seleniumPipes::getCurrentUrl(remDr)",
-                      paste("if(current == '",url,"'){", sep = ""),
+                      "current <- remDr$getCurrentUrl()[[1]]",
+                      paste("if(current == ",url,"){", sep = ""),
                       "not_loaded <- FALSE",
                       "}",
                       "}",
@@ -66,7 +66,7 @@ goback <- function(prev = NULL){
 
   while_loop <- paste("while(not_returned){",
                       "Sys.sleep(0.25)",
-                      "current <- seleniumPipes::getCurrentUrl(remDr)",
+                      "current <- remDr$getCurrentUrl()[[1]]",
                       "if(current != from){",
                       "not_returned <- FALSE",
                       "}",
@@ -101,13 +101,13 @@ goforward <- function(prev = NULL){
 
   not_forward <- "not_forward <- TRUE"
 
-  from <- "from <- seleniumPipes::getCurrentUrl(remDr)"
+  from <- "from <- remDr$getCurrentUrl()[[1]]"
 
   go_forward <- "remDr$goForward()"
 
   while_loop <- paste("while(not_forward){",
                       "Sys.sleep(0.25)",
-                      "current <- seleniumPipes::getCurrentUrl(remDr)",
+                      "current <- remDr$getCurrentUrl()[[1]]",
                       "if(current != from){",
                       "not_forward <- FALSE",
                       "}",
